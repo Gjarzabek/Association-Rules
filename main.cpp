@@ -1,6 +1,7 @@
 #include <iostream>
 
-/*  Implenetacja algorytmu Apriopri
+/*
+    Generacja reguł asocjacyjnych w zbiorze danych
 
     Założenia
     
@@ -8,7 +9,8 @@
     output - reguły w postaci vectora par.
     kazda para K reprezentuje regułę(zaleznosc)
     K == < vec<T>, vec<T> >
- */
+
+*/
 
 
 
