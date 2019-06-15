@@ -17,27 +17,34 @@
     --------------------
 
     1. Generacja Zbiorów częstych
+    2. Twórc
 
-
-    przetworzyć go i wygenerować reguły.
 --------------------------------------------------
 */
 
-#include <vector>
-
 namespace AssociationRules {
 
-template <typename T>
-class Apriori
-{
+template <typename T, typename N>
+class Apriori {
+
     private:
-        T & train_data;
-        void apriori_gen();
-        void 
+        // generuje zbiory częste 
+        static void apriori_gen(const T & data, const double & conf, const double & acc);
+        // z wygenerowanych zbiorów częstych generuje reguły asocjacyjne,
+        // wybiera te z porządanymi parametrami conf/acc
+        static void rule_gen();
+        Apriori() = delete;
+        Apriori(const Apriori & a) = delete;
+        ~Apriori();
 
     public:
-        Apriori(T t_data): train_data(t_data);
-        ~Apriori();
+        // argument - kontener danych, parametry
+        // zwracana_wartosc - kontener danych zawierających reguły
+        // postać reguły - para kontenerów N (obie strony implikacji)
+        static void calculate(const T & data, const double & conf, const double & acc) {
+            train_data = data;
+
+        };
 };
 
 }
