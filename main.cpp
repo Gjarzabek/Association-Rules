@@ -1,6 +1,6 @@
 #include <iostream>
 
-/*  Implenetacja algorytmu Apriopri
+/*  Implenetacja algorytmu Apriori
 
     Założenia
     
